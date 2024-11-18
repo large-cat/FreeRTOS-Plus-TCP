@@ -595,6 +595,9 @@ BaseType_t xIPIsNetworkTaskReady( void );
 
 #endif /* ipconfigUSE_TCP */
 
+#ifndef NETWORKINTERFACE_T_DEFINED
+typedef struct xNetworkInterface NetworkInterface_t;
+#endif
 /**
  * Structure to hold the information about a UDP socket.
  */

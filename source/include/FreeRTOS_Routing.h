@@ -113,6 +113,7 @@
         struct xNetworkEndPoint * pxEndPoint; /**< A list of end-points bound to this interface. */
         struct xNetworkInterface * pxNext;    /**< The next interface in a linked list. */
     } NetworkInterface_t;
+    #define NETWORKINTERFACE_T_DEFINED
 
 /*
  *  // As an example:

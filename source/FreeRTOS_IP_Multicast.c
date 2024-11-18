@@ -69,6 +69,9 @@
 #include "FreeRTOS_IP_Timers.h"
 #include "FreeRTOS_IGMP.h"
 
+#define max(a, b)        ((a) > (b) ? (a) : (b))
+#define min(a, b)        ((a) < (b) ? (a) : (b))
+
 /* Exclude the entire file if multicast support is not enabled. */
 /* *INDENT-OFF* */
 #if ( ipconfigIS_ENABLED( ipconfigSUPPORT_IP_MULTICAST ) )

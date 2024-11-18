@@ -85,6 +85,7 @@ target_sources( freertos_plus_tcp
       FreeRTOS_UDP_IP.c
       FreeRTOS_UDP_IPv4.c
       FreeRTOS_UDP_IPv6.c
+      FreeRTOS_IP_Multicast.c
 )
 
 target_include_directories( freertos_plus_tcp
