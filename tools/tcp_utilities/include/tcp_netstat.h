@@ -103,6 +103,8 @@ typedef struct
 extern BaseType_t vGetMetrics( MetricsType_t * pxMetrics );
 extern void vShowMetrics( const MetricsType_t * pxMetrics );
 
+#undef iptraceNETWORK_INTERFACE_INPUT
+#undef iptraceNETWORK_INTERFACE_OUTPUT
 
 #define iptraceNETWORK_INTERFACE_INPUT( uxDataLength, pucEthernetBuffer ) \
     xInputCounters.uxByteCount += uxDataLength;                           \

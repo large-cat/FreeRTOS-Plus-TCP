@@ -6711,7 +6711,7 @@ BaseType_t FreeRTOS_GetIPType( ConstSocket_t xSocket )
             {
                 #if ( ipconfigIS_ENABLED( ipconfigUSE_IPv4 ) )
                     pxSocket->u.xUDP.xMulticastAddress.ulIP_IPv4 = pxMulticastAction->xMulticastGroup.ulIP_IPv4;
-                    vSetMultiCastIPv4MacAddress( pxMulticastAction->xMulticastGroup.ulIP_IPv4, MCastMacBytes );
+                    vSetMultiCastIPv4MacAddress( pxMulticastAction->xMulticastGroup.ulIP_IPv4, (MACAddress_t *)MCastMacBytes );
                 #else
                     /* FreeRTOS_setsockopt() will prevent this case */
                 #endif
@@ -6858,7 +6858,7 @@ BaseType_t FreeRTOS_GetIPType( ConstSocket_t xSocket )
                 {
                     xAddressIsGood = pdTRUE;
 
-                    vSetMultiCastIPv4MacAddress( pxSocket->u.xUDP.xMulticastAddress.ulIP_IPv4, MCastMacBytes );
+                    vSetMultiCastIPv4MacAddress( pxSocket->u.xUDP.xMulticastAddress.ulIP_IPv4, (MACAddress_t *)MCastMacBytes );
 
                     if( pxNetIf != NULL )
                     {
